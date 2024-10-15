@@ -1,4 +1,4 @@
-const PromptCard = () => {
+ const PromptCard = () => {
   return (
     <div>PromptCard</div>
   )
