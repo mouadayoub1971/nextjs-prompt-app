@@ -18,22 +18,22 @@ const EditPrompt = () => {
    const data = await response.json();
    setPost({
     prompt: data.prompt,
-    tag : data.tag
+    tags : data.tag
    })
   }
-  if (promptId) getPromptDetails();
+  if (promptId) getPrompt();
  } , [promptId])
- const createPrompt = async (e) => {
-  console.log('is this heaten ');
+ const updatePrompt = async (e) => {
+  console.log('this is the update prompt  ');
   e.preventDefault();
   setSubmitting(true);
-
+  if(!promptId) return alert("messing prompt id ! ")
   try {
-   const response = await fetch('api/prompt/new', {
-    method: 'POST',
+   console.log(`this is the post ${post.prompt} and the post tag to be send ${post.tags}`)
+   const response = await fetch(`/api/prompt/${promptId}`, {
+    method: "PATCH",
     body: JSON.stringify({
      prompt: post.prompt,
-     userId: session?.user.id,
      tag: post.tags,
     }),
    });
@@ -47,6 +47,6 @@ const EditPrompt = () => {
    setSubmitting(false);
   }
  };
- return <Form type="Create" post={post} setPost={setPost} submitting={submitting} handleSubmit={createPrompt} />;
+ return <Form type="Edit" post={post} setPost={setPost} submitting={submitting} handleSubmit={updatePrompt} />;
 };
 export default EditPrompt;

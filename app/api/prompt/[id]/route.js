@@ -17,7 +17,8 @@ export const GET = async (request, {params}) => {
 
 // PATCH (UPDATE)
 export const PATCH = async (request, { params }) => {
- const {prompt, tag} = request.json();
+ const { prompt, tag } = await request.json();
+ console.log(`the prompt in the db is ${prompt} the tag is ${tag}`)
 
  try {
   await connectToDB();
