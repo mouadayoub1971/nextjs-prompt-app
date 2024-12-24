@@ -45,7 +45,7 @@ const MyProfile = () => {
   };
   console.log(allPosts);
   return (
-    <Profile name='My' desc='Welcome to you personal profile where you have all the prompt that you create ' data = {allPosts} handleEdit={handleEdit} handleDelete={handleDelete} />
+    <Profile name='My' desc='Welcome to your personal profile, where all the stories you create, share, and cherish come to life!' data = {allPosts} handleEdit={handleEdit} handleDelete={handleDelete} />
   )
 }
 export default MyProfile

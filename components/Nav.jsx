@@ -19,8 +19,8 @@ const Nav = () => {
   return (
    <nav className="flex-between w-full mb-16 pt-3">
     <Link href="/" className="flex gap-2 flex-center">
-     <Image src="/assets/images/logo.svg" width={30} height={30} className="object-contain" />
-     <p className="logo_text">PromptUi</p>
+     <Image src="/assets/images/book.svg" width={50} height={50} className="object-contain" />
+     <p className="logo_text">StorySphere</p>
     </Link>
 
     {/* Desktop Navigation */}
@@ -31,7 +31,7 @@ const Nav = () => {
         Create Post
        </Link>
        <button onClick={signOut} className="outline_btn">
-        SingOut
+        SignOut
        </button>
        <Link href="/profile">
         <Image src={session?.user.image} width={37} height={37} className="rounded-full" alt="profile" />

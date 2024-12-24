@@ -8,16 +8,15 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
       <span className="blue_gradient">{type} Post</span>
      </h1>
      <p className="desc text-left max-w-md">
-      {type} and share amazing prompts with the worlsd, and let your imagination to inspire the entire world with best
-      AI prompts{' '}
+      {type} And share your amazing stories with the world. Let your imagination inspire everyone, as your words weave tales that captivate and connect us all{' '}
      </p>
      <form onSubmit={handleSubmit} className="mt-10 w-full max-w-2xl flex flex-col gap-7  glassmorphism">
       <label>
-       <span className="font-satoshi font-semibold text-base text-gray">Your Ai Prompt</span>
+       <span className="font-satoshi font-semibold text-base text-gray">Your Story, Your Voice</span>
        <textarea
         value={post.prompt}
         onChange={(e) => setPost({ ...post, prompt: e.target.value })}
-        placeholder="please tap your prompt"
+        placeholder="Start your story"
         required
         className="form_textarea"
        ></textarea>
@@ -25,7 +24,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
 
       <label>
        <span className="font-satoshi font-semibold text-base">
-        Tag : <span className="font-normal">( #product, #webdevelopment, #idea, etc)</span>
+        Tag : <span className="font-normal">( #StorySharing, #CreativeWriting, #Inspiration, #ImaginationUnleashed...)</span>
        </span>
        <textarea
         value={post.tags}

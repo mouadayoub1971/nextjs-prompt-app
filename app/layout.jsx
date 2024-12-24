@@ -4,7 +4,7 @@ import Provider from '@components/Provider'
 
 
 export const metadata = {
- title: "Prompt.Ai",
+ title: "StorySphere",
  description : "Discover & Share"
 }
 
