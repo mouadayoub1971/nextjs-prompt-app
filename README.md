@@ -9,9 +9,9 @@ This is a full-stack web application built with Next.js, MongoDB, and styled wit
 - TailwindCSS for responsive and utility-first styling
 - REST API for managing data
 
-
-  ![Alt text](./images/image.png)
   ![Alt text](./images/image2.png)
+  ![Alt text](./images/image.png)
+
 
 ## Prerequisites
 
